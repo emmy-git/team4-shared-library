@@ -3,10 +3,11 @@ def call(String repoUrl){
         agent any 
         stages{
             stage('1-build'){
-                sh 'free -g'
+                steps{
+                    sh 'free -g'
+                }
             }
-        }
-            stage("Checkout Code") {
+                       stage("Checkout Code") {
                steps {
                    git branch: 'main',
                           url: "${repoUrl}"
@@ -16,6 +17,7 @@ def call(String repoUrl){
             steps{
                 echo "new demo"
             }
-           }   
+           }
+        }
     }
 }
