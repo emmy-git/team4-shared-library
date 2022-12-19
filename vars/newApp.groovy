@@ -13,9 +13,9 @@ def uber(String repoUrl){
                }
            }
            stage('closing'){
-            steps{
+            steaps{
                 echo "new demo"
             }
-           }
+           }   
     }
 }
